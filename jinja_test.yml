@@ -1,0 +1,11 @@
+- hosts: lb
+  vars:
+  - n : pop
+  tasks:
+  - copy:
+      src: "hello.txt"
+      dest: "/root/hi.txt"
+
+  - template:
+      src: "hello.txt"
+      dest: "/root/Hi_pop.txt"
